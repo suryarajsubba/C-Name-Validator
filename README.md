@@ -18,29 +18,6 @@ If the input is valid, it capitalizes the first letter of each word and displays
 - Rejects empty or spaces-only input
 - Capitalizes the first letter of each word
 
-## Example
-
-### Valid Input
-
-**Input:**
-    
-    Enter your name:   surya raj subba
-
-**Output:**
-
-    Valid input
-    Hello Surya Raj Subba!
-
-### Invalid Input
-
-**Input:**
-
-    Enter your name: Surya123
-
-**Output:**
-
-    Invalid input!
-
 ## Validation Rules
 
 A name is considered valid when:
@@ -52,6 +29,41 @@ A name is considered valid when:
 - It fits within the input buffer
 
 Leading and trailing spaces are removed before the final validation.
+
+## Example
+
+**Valid Input**
+
+`Enter your name: surya raj subba`
+
+**Output**
+
+`Valid input`  
+`Hello Surya Raj Subba!`
+
+**Invalid Input**
+
+`Enter your name: Surya123`
+
+**Output**
+
+`Invalid input!`
+
+**Repeated Spaces**
+
+`Enter your name: Surya  Raj`
+
+**Output**
+
+`Invalid input!`
+
+**Input Too Long**
+
+`Enter your name: abcdefghijklmnopqrst`
+
+**Output**
+
+`Input is too long!`
 
 ## Concepts Practiced
 
@@ -69,11 +81,11 @@ Leading and trailing spaces are removed before the final validation.
 
 Compile using GCC:
 
-    gcc name_validator.c -o name_validator
+`gcc name_validator.c -o name_validator`
 
 Run:
 
-    ./name_validator
+`./name_validator`
 
 ## Author
 
