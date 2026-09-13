@@ -10,11 +10,12 @@ If the input is valid, it capitalizes the first letter of each word and displays
 
 ## Features
 
-- Accepts letters and spaces
-- Rejects numbers and special characters
+- Accepts uppercase and lowercase letters
+- Allows spaces between words
+- Rejects digits and special characters
 - Detects input that is too long
 - Removes leading and trailing spaces
-- Rejects repeated spaces
+- Rejects repeated spaces between words
 - Rejects empty or spaces-only input
 - Capitalizes the first letter of each word
 
@@ -22,7 +23,7 @@ If the input is valid, it capitalizes the first letter of each word and displays
 
 A name is considered valid when:
 
-- It contains only letters (`A-Z`, `a-z`) and spaces
+- It contains only English letters (`A-Z`, `a-z`) and spaces
 - It is not empty
 - It does not contain only spaces
 - It does not contain consecutive spaces
@@ -30,40 +31,53 @@ A name is considered valid when:
 
 Leading and trailing spaces are removed before the final validation.
 
-## Example
+## Sample Input/Output
 
-**Valid Input**
+### Valid Input
 
-`Enter your name: surya raj subba`
+**Input:** `surya raj subba`
 
-**Output**
+**Output:**
+- `Valid input`
+- `Hello Surya Raj Subba!`
 
-`Valid input`  
-`Hello Surya Raj Subba!`
+### Invalid Input
 
-**Invalid Input**
+**Input:** `Surya123`
 
-`Enter your name: Surya123`
+**Output:** `Invalid input!`
 
-**Output**
+### Repeated Spaces
 
-`Invalid input!`
+**Input:** `Surya  Raj`
 
-**Repeated Spaces**
+**Output:** `Invalid input!`
 
-`Enter your name: Surya  Raj`
+### Input Too Long
 
-**Output**
+**Input:** `abcdefghijklmnopqrst`
 
-`Invalid input!`
+**Output:** `Input is too long!`
 
-**Input Too Long**
+## How to Compile and Run
 
-`Enter your name: abcdefghijklmnopqrst`
+### Using GCC
 
-**Output**
+Compile the program:
 
-`Input is too long!`
+`gcc name_validator.c -o name_validator`
+
+Run it:
+
+`./name_validator`
+
+### Windows
+
+If using GCC/MinGW:
+
+`gcc name_validator.c -o name_validator.exe`
+
+`name_validator.exe`
 
 ## Concepts Practiced
 
@@ -72,20 +86,11 @@ Leading and trailing spaces are removed before the final validation.
 - `strlen()`
 - `strchr()`
 - `strcspn()`
-- Loops and conditional statements
+- Loops
+- Conditional statements
 - Input validation
 - String manipulation
 - Input buffer handling
-
-## How to Run
-
-Compile using GCC:
-
-`gcc name_validator.c -o name_validator`
-
-Run:
-
-`./name_validator`
 
 ## Author
 
