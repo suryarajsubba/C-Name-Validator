@@ -1,12 +1,6 @@
 # C Name Validator
 
-A simple C program that validates a user's name and formats it for display.
-
-## What It Does
-
-The program takes a name as input and checks whether it follows the defined validation rules.
-
-If the input is valid, it capitalizes the first letter of each word and displays a greeting.
+A simple C program that validates and formats a user's name using string handling and input validation.
 
 ## Features
 
@@ -21,12 +15,12 @@ If the input is valid, it capitalizes the first letter of each word and displays
 
 ## Validation Rules
 
-A name is considered valid when:
+The input is considered valid if:
 
 - It contains only English letters (`A-Z`, `a-z`) and spaces
 - It is not empty
 - It does not contain only spaces
-- It does not contain consecutive spaces
+- It does not contain repeated consecutive spaces
 - It fits within the input buffer
 
 Leading and trailing spaces are removed before the final validation.
@@ -37,9 +31,8 @@ Leading and trailing spaces are removed before the final validation.
 
 **Input:** `surya raj subba`
 
-**Output:**
-- `Valid input`
-- `Hello Surya Raj Subba!`
+**Output:** `Valid input`  
+**Output:** `Hello Surya Raj Subba!`
 
 ### Invalid Input
 
@@ -63,19 +56,21 @@ Leading and trailing spaces are removed before the final validation.
 
 ### Using GCC
 
-Compile the program:
+Compile:
 
 `gcc name_validator.c -o name_validator`
 
-Run it:
+Run:
 
 `./name_validator`
 
 ### Windows
 
-If using GCC/MinGW:
+Compile:
 
 `gcc name_validator.c -o name_validator.exe`
+
+Run:
 
 `name_validator.exe`
 
