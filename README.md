@@ -32,7 +32,7 @@ Leading and trailing spaces are removed before the final validation.
 **Input:** `surya raj subba`
 
 **Output:** `Valid input`  
-**Output:** `Hello Surya Raj Subba!`
+`Hello Surya Raj Subba!`
 
 ### Invalid Input
 
