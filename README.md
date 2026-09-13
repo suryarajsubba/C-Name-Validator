@@ -1,75 +1,80 @@
 # C Name Validator
 
-A beginner-friendly C program that validates and formats a user's name using string handling and input validation.
+A simple C program that validates a user's name and formats it for display.
+
+## What It Does
+
+The program takes a name as input and checks whether it follows the defined validation rules.
+
+If the input is valid, it capitalizes the first letter of each word and displays a greeting.
 
 ## Features
 
-- Accepts uppercase and lowercase letters
-- Allows spaces between words
-- Rejects digits and special characters
+- Accepts letters and spaces
+- Rejects numbers and special characters
 - Detects input that is too long
 - Removes leading and trailing spaces
-- Rejects repeated spaces between words
+- Rejects repeated spaces
 - Rejects empty or spaces-only input
 - Capitalizes the first letter of each word
 
-## Validation Rules
-
-The input is considered valid if:
-
-- It contains only English letters (`A-Z`, `a-z`) and spaces.
-- It is not empty.
-- It does not contain only spaces.
-- It does not contain repeated consecutive spaces.
-- Its length fits within the input buffer.
-
-Leading and trailing spaces are removed before the final validation.
-
-## Sample Input/Output
+## Example
 
 ### Valid Input
 
-```text
-Enter your name: surya raj subba
-Valid input
-Hello Surya Raj Subba!
+**Input:**
+    
+    Enter your name:   surya raj subba
 
-Invalid Input
-Enter your name: Surya123
-Invalid input!
-Repeated Spaces
-Enter your name: Surya  Raj
-Invalid input!
-Input Too Long
-Enter your name: abcdefghijklmnopqrst
-Input is too long!
-How to Compile and Run
-Using GCC
+**Output:**
 
-Compile the program:
+    Valid input
+    Hello Surya Raj Subba!
 
-gcc name_validator.c -o name_validator
+### Invalid Input
 
-Run it:
+**Input:**
 
-./name_validator
-Windows
+    Enter your name: Surya123
 
-If using GCC/MinGW:
+**Output:**
 
-gcc name_validator.c -o name_validator.exe
-name_validator.exe
-Concepts Practiced
-Character arrays and strings
-fgets()
-strlen()
-strchr()
-strcspn()
-Loops
-Conditional statements
-Input validation
-String manipulation
-Input buffer handling
-Author
+    Invalid input!
 
-Surya Raj Subba
+## Validation Rules
+
+A name is considered valid when:
+
+- It contains only letters (`A-Z`, `a-z`) and spaces
+- It is not empty
+- It does not contain only spaces
+- It does not contain consecutive spaces
+- It fits within the input buffer
+
+Leading and trailing spaces are removed before the final validation.
+
+## Concepts Practiced
+
+- Character arrays and strings
+- `fgets()`
+- `strlen()`
+- `strchr()`
+- `strcspn()`
+- Loops and conditional statements
+- Input validation
+- String manipulation
+- Input buffer handling
+
+## How to Run
+
+Compile using GCC:
+
+    gcc name_validator.c -o name_validator
+
+Run:
+
+    ./name_validator
+
+## Author
+
+**Surya Raj Subba**
